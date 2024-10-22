@@ -23,7 +23,7 @@ fetch('monsterData.json')
 
 function searchMonster() {
   const searchValue = document.getElementById('monster-search').value.trim().toLowerCase();
-  const MonsterInfo = document.getElementById('monster-stats-info');
+  const monsterInfo = document.getElementById('monster-stats-info');
 
   const findMonster = monsterData.find(p => p.name.toLowerCase() === searchValue);
   if(findMonster) {
