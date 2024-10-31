@@ -13,6 +13,7 @@ const searchButton = document.getElementById('monster-search-button');
 const testDiv = document.getElementById('test-div');
 const searchValue = document.getElementById('monster-search');
 
+
 let monsterData = []; 
 
 // Use the correct GitHub raw link
@@ -62,3 +63,4 @@ searchValue.addEventListener('keydown', event => {
     searchMonster();
   }
 });
+
