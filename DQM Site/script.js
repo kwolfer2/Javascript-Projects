@@ -11,6 +11,7 @@ const monsterINGrowth = document.getElementById('monster-in-out');
 const monsterSkillList = document.getElementById('monster-skill-list');
 const searchButton = document.getElementById('monster-search-button');
 const testDiv = document.getElementById('test-div');
+const searchValue = document.getElementById('monster-search');
 
 let monsterData = []; 
 
@@ -53,4 +54,11 @@ searchButton.addEventListener('click', event => {
   testDiv.textContent = `'button has been pressed'`;
   event.preventDefault();
   searchMonster();
+});
+searchValue.addEventListener('keydown', event => {
+  if (event.key === 'Enter') {  // Check if the Enter key was pressed
+    testDiv.textContent = `'Enter key has been pressed'`;
+    event.preventDefault();
+    searchMonster();
+  }
 });
