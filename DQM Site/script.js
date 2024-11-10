@@ -15,6 +15,7 @@ const searchValue = document.getElementById('monster-search');
 
 
 let monsterData = []; 
+let monsterStatCalcData = [];
 
 // Use the correct GitHub raw link
 fetch('https://raw.githubusercontent.com/kwolfer2/monster-json/83e6c36a9773fae217f5aefb1842a74724e0f7dd/monsterData.json')
@@ -51,6 +52,29 @@ function searchMonster() {
   }
 }
 
+const getProjectedStats = () => {
+  
+}
+
+//let monsterStatCalcData = [];
+
+// fetch('https://raw.githubusercontent.com/kwolfer2/monster-json/refs/heads/main/statCalc.json')
+//     .then(response => response.json())
+//     .then(data => {
+//         monsterStatCalcData=data;
+
+//     })
+//   .catch(error => console.error('Error fetching Monster data:', error));
+
+// function calcStats() {
+//     const searchValue = document.getElementById('monster-search').value.trim().toLowerCase();
+
+//   // Search for the monster by name
+//   const findMonster = monsterData.find(p => p.name.toLowerCase() === searchValue);
+
+//   if(findMonster) {
+
+
 searchButton.addEventListener('click', event => { 
   testDiv.textContent = `'button has been pressed'`;
   event.preventDefault();
@@ -63,4 +87,3 @@ searchValue.addEventListener('keydown', event => {
     searchMonster();
   }
 });
-
